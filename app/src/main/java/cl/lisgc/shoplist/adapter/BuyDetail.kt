@@ -23,7 +23,6 @@ class BuyDetail(
         val textDetail = findViewById<TextView>(R.id.textViewDetail)
         val textQuantity = findViewById<TextView>(R.id.textViewQuantity)
         val textPrice = findViewById<TextView>(R.id.textViewPrice)
-        val buttonBack = findViewById<Button>(R.id.buttonBack)
 
         // Set patient information in TextViews
         textName.text = product.name
@@ -31,9 +30,5 @@ class BuyDetail(
         textQuantity.text = product.quantity.toString()
         textPrice.text = product.price.toString()
 
-        // Set a click listener for the "Go Back" button to dismiss the dialog
-        buttonBack.setOnClickListener {
-                dismiss()
-        }
     }
 }

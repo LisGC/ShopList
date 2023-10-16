@@ -34,7 +34,7 @@
     </ListView>
 
     <Button
-        android:id="@+id/add_buy"
+        android:id="@+id/add_inventory"
         android:layout_width="67dp"
         android:layout_height="67dp"
         android:layout_gravity="bottom|end"

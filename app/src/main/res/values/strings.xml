@@ -34,4 +34,6 @@
     <string name="add_quantity">Cantidad</string>
     <string name="add_price">Precio</string>
     <string name="add_location">Ubicacion</string>
+    <string name="add_buy">Agregar a Compra</string>
+    <string name="add_inventory">Agregar a Inventario</string>
 </resources>

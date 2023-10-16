@@ -25,9 +25,9 @@ class ProductDetails : AppCompatActivity() {
         textPrice = findViewById(R.id.textViewPrice)
 
         if(Build.VERSION.SDK_INT >= 33){
-            product = intent.getParcelableExtra("Producto", Product::class.java) ?: Product("", "", 0, 0)
+            product = intent.getParcelableExtra("Product", Product::class.java) ?: Product("", "", 0, 0)
         }else{
-            product = intent.getParcelableExtra("Producto") ?: Product("", "", 0, 0)
+            product = intent.getParcelableExtra("Product") ?: Product("", "", 0, 0)
         }
 
         if (product != null) {

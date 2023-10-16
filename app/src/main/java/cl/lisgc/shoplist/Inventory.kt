@@ -46,9 +46,9 @@ class Inventory : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == REQUEST_REGISTER && resultCode == RESULT_OK) {
-            val nuevoProducto = data?.getParcelableExtra<Product>("new")
-            if (nuevoProducto != null) {
-                products.add(nuevoProducto)
+            val newProduct = data?.getParcelableExtra<Product>("new")
+            if (newProduct != null) {
+                products.add(newProduct)
                 if (listOption) {
 
                 }
