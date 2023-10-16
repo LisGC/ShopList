@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">ShopList</string>
+
+    ///Main menu
+    <string name="main_menuText">Bienvenido a: Tu Lista de Compras</string>
+    <string name="buy">Comprar</string>
+    <string name="stores">Tiendas</string>{
+    <string name="inventory">Inventario</string>
+
+    ///Buy
+
+    ///Tiendas
+
+    ///Inventario
 </resources>
