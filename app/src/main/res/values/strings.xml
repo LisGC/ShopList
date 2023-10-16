@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">ShopList</string>
 
+    ///Splash Screen
+    <string name="title">Lircayhub
+    Lisbeth González Castillo
+    ligonzalez20@alumnos.utalca</string>
+
     ///Main menu
     <string name="main_menuText">Bienvenido a: Tu Lista de Compras</string>
     <string name="buy">Comprar</string>

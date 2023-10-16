@@ -5,6 +5,7 @@
 
     ///colours used in Background
     <color name="limeGreen">#DCED8E</color>
+    <color name="lightOrange">#F6C86A</color>
 
     //colours used for Text
     <color name="darkBrown">#3E271C</color>

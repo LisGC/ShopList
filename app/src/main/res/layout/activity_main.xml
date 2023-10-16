@@ -30,7 +30,7 @@
         android:layout_marginEnd="69dp"
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/amaranth_italic"
-        android:text="TextView"
+        android:text="@string/main_menuText"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/darkBrown"
@@ -40,8 +40,7 @@
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/main_menuText" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_buy"

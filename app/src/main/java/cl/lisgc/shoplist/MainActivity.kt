@@ -19,11 +19,21 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentAbout)
         }
 
-
         ///Buy
+        val buyNavegation = findViewById<Button>(R.id.button_buy)
+
+        buyNavegation.setOnClickListener {
+            val intentAbout = Intent(this,Buy::class.java)
+            startActivity(intentAbout)
+        }
 
         ///Stores
+        val storesNavegation = findViewById<Button>(R.id.button_stores)
 
+        storesNavegation.setOnClickListener {
+            val intentAbout = Intent(this,Stores::class.java)
+            startActivity(intentAbout)
+        }
     }
 
 
