@@ -9,15 +9,18 @@
 
     <TextView
         android:id="@+id/textBuy"
-        android:layout_width="418dp"
+        android:layout_width="match_parent"
         android:layout_height="64dp"
         android:background="@color/dullMagenta"
         android:fontFamily="@font/amaranth_italic"
+        android:text="@string/buyTitle"
         android:textAlignment="center"
         android:textColor="@color/darkBrown"
         android:textSize="40sp"
         android:textStyle="bold|italic"
         android:typeface="serif"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/buyList"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -38,7 +41,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="15dp"
-
+        android:onClick="createProduct"
         android:backgroundTint="@color/dullMagenta"
         android:text="@string/add"
         android:textSize="30sp"

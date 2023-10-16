@@ -1,0 +1,42 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/lightOrange"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_name"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_detail" />
+
+    <TextView
+        android:id="@+id/textViewQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_quantity" />
+
+    <TextView
+        android:id="@+id/textViewPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_price" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:backgroundTint="@color/darkGreen"
+        android:text="@string/back" />
+</LinearLayout>
