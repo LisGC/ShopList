@@ -13,10 +13,12 @@
     <string name="inventory">Inventario</string>
 
     ///Buy
+    <string name="buyTitle">Compras</string>
 
-    ///Tiendas
+    ///Stores
+    <string name="storeTitle">Tiendas Disponibles</string>
 
-    ///Inventario
+    ///Inventory
 
     ///Others
     <string name="back">Volver</string>

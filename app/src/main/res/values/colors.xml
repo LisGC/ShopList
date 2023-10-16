@@ -6,6 +6,11 @@
     ///colours used in Background
     <color name="limeGreen">#DCED8E</color>
     <color name="lightOrange">#F6C86A</color>
+    <color name="lightAqua">#BBF6E4</color>
+    <color name="dullGreen">#92E0B8</color>
+    <color name="lightMagenta">#FABEC7</color>
+    <color name="dullMagenta">#C77887</color>
+
 
     //colours used for Text
     <color name="darkBrown">#3E271C</color>
