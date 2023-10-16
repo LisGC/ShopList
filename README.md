@@ -3,7 +3,7 @@ Este es el README para la aplicacion "ShopList" o "Tu Lista de Compra" hecho por
 Aplicacion solucion de una problematica de gestion de compras, mantiene el registro de estas, ademas de tiendas en las cuales comprar. Se tiene una funcion basica de lo que se pide.
 
 Requerimientos funcionales
-- La aplicacion debe mostrar al clickear un botton de compra una lista de compras
+- La aplicacion debe mostrar al clickear un botón de compra una lista de compras
 - La aplicacion debe permitir agregar productos ya sea al inventario o a la lista de compra
 - La aplicacion debe mostrar las tiendas en las cuales usualmente el usuario compra
 - La aplicacion debe responder a las acciones de los usuarios
