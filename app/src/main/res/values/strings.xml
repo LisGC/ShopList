@@ -19,6 +19,7 @@
     <string name="storeTitle">Tiendas Disponibles</string>
 
     ///Inventory
+    <string name="inventoryTitle">Inventario</string>
 
     ///Others
     <string name="back">Volver</string>

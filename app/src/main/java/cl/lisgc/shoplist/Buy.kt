@@ -28,9 +28,9 @@ class Buy : AppCompatActivity() {
         listBuy = findViewById(R.id.buyList)
 
         products = mutableListOf(
-            Product("Pan", "Marraqueta", 6, 400),
-            Product("Coca-Cola", "1.5lt", 1, 1500),
-            Product("Jamon", "Pavo", 6, 150),
+            Product("Pan de Molde", "bimbo", 6, 1200),
+            Product("Fanta", "1.5lt", 1, 1500),
+            Product("Jamon Acaramelado", "Pavo", 6, 500),
             Product("Queso", "Gauda", 6, 250)
 
         )

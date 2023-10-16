@@ -26,9 +26,9 @@ class Stores : AppCompatActivity() {
         storesList = findViewById(R.id.storesList)
 
         stores = mutableListOf(
+            StoreT("aCuenta", "Av. 1 Oriente 323", "Lunes a sábado 8:00 – 21:30"),
             StoreT("Jumbo", "El Arenal 441, Talca", "Lunes a sábado 8:00 – 21:00"),
-            StoreT("Tottus", "Calle Cuatro Norte 1530, Talca", "Lunes a Domingo 08:30 a 21:30 hrs"),
-            StoreT("aCuenta", "Av. 1 Oriente 323", "Lunes a sábado 8:00 – 21:30")
+            StoreT("Tottus", "Calle Cuatro Norte 1530, Talca", "Lunes a Domingo 08:30 a 21:30 hrs")
         )
 
         storeAdapter = StoreAdapterList(this, R.layout.store_item, stores)
