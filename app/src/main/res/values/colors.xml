@@ -2,4 +2,16 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    ///colours used in Background
+    <color name="limeGreen">#DCED8E</color>
+
+    //colours used for Text
+    <color name="darkBrown">#3E271C</color>
+
+    //colours used for Buttons
+    <color name="darkGreen">#3A5E27</color>
+
+
+
 </resources>
