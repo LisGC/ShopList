@@ -12,8 +12,8 @@ class SplashScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
-        var max: Long = 2500
-        var x: Long = 500
+        val max: Long = 2500
+        val x: Long = 500
 
         val timer = object : CountDownTimer(max,x) {
             override fun onTick(millisUntilFinished: Long) {
@@ -21,7 +21,7 @@ class SplashScreen : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                var intent = Intent(this@SplashScreen, MainActivity::class.java)
+                val intent = Intent(this@SplashScreen, MainActivity::class.java)
                 startActivity(intent)
 
 

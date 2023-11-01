@@ -8,24 +8,24 @@ import android.widget.EditText
 import cl.lisgc.shoplist.entity.Product
 
 class AddInventoryItem : AppCompatActivity() {
-    private lateinit var Name: EditText
-    private lateinit var Detail: EditText
-    private lateinit var Quantity: EditText
-    private lateinit var AddButton: Button
+    private lateinit var name: EditText
+    private lateinit var detail: EditText
+    private lateinit var quantity: EditText
+    private lateinit var addButton: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_inventory_item)
 
-        Name = findViewById(R.id.editName)
-        Detail = findViewById(R.id.editDetail)
-        Quantity = findViewById(R.id.editQuantity)
-        AddButton = findViewById(R.id.confirmButton)
+        name = findViewById(R.id.editName)
+        detail = findViewById(R.id.editDetail)
+        quantity = findViewById(R.id.editQuantity)
+        addButton = findViewById(R.id.confirmButton)
 
-        AddButton.setOnClickListener {
+        addButton.setOnClickListener {
 
-            val name = Name.text.toString()
-            val detail = Detail.text.toString()
-            val quantity = Quantity.text.toString().toIntOrNull() ?: 0
+            val name = name.text.toString()
+            val detail = detail.text.toString()
+            val quantity = quantity.text.toString().toIntOrNull() ?: 0
 
             val product = Product(name, detail, quantity, 0)
 

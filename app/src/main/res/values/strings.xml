@@ -9,7 +9,7 @@
     ///Main menu
     <string name="main_menuText">Bienvenido a:\n Tu Lista de Compras</string>
     <string name="buy">Comprar</string>
-    <string name="stores">Tiendas</string>{
+    <string name="stores">Tiendas</string>
     <string name="inventory">Inventario</string>
 
     ///Buy

@@ -48,9 +48,9 @@ class Inventory : AppCompatActivity() {
         if (requestCode == REQUEST_REGISTER && resultCode == RESULT_OK) {
             val newProduct = data?.getParcelableExtra<Product>("new")
             if (newProduct != null) {
-                products.add(newProduct)
-                if (listOption) {
 
+                if (listOption) {
+                    products.add(newProduct)
                 }
                 productsAdapter.notifyDataSetChanged()
             }

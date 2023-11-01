@@ -8,30 +8,30 @@ import android.widget.EditText
 import cl.lisgc.shoplist.entity.Product
 
 class AddBuyItem : AppCompatActivity() {
-    private lateinit var Name: EditText
-    private lateinit var Details: EditText
-    private lateinit var Quantity: EditText
-    private lateinit var Price: EditText
-    private lateinit var AddButton: Button
+    private lateinit var name: EditText
+    private lateinit var details: EditText
+    private lateinit var quantity: EditText
+    private lateinit var price: EditText
+    private lateinit var addButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_buy_item)
 
-        Name = findViewById(R.id.editName)
-        Details = findViewById(R.id.editDetail)
-        Quantity = findViewById(R.id.editQuantity)
-        Price = findViewById(R.id.editPrice)
-        AddButton = findViewById(R.id.confirmButton)
+        name = findViewById(R.id.editName)
+        details = findViewById(R.id.editDetail)
+        quantity = findViewById(R.id.editQuantity)
+        price = findViewById(R.id.editPrice)
+        addButton = findViewById(R.id.confirmButton)
 
-        AddButton.setOnClickListener{
+        addButton.setOnClickListener{
 
-            val NameEdit = Name.text.toString()
-            val DetailsEdit = Details.text.toString()
-            val QuantityEdit = Quantity.text.toString().toIntOrNull() ?: 0
-            val PriceEdit = Price.text.toString().toIntOrNull() ?: 0
+            val nameEdit = name.text.toString()
+            val detailsEdit = details.text.toString()
+            val quantityEdit = quantity.text.toString().toIntOrNull() ?: 0
+            val priceEdit = price.text.toString().toIntOrNull() ?: 0
 
-            val product = Product(NameEdit, DetailsEdit, QuantityEdit, PriceEdit)
+            val product = Product(nameEdit, detailsEdit, quantityEdit, priceEdit)
 
             val resultIntent = Intent()
             resultIntent.putExtra("new", product)
