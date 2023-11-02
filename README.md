@@ -21,4 +21,4 @@ Link Presentacion
 https://docs.google.com/presentation/d/1yd8Ru5xrRcxam-l8-kkJzS8s7OdFr7v96bLPVEunFpE/edit?usp=sharing
 
 Link APK 
-https://drive.google.com/file/d/1dwudQ-Sll9dOCDLHrdbOz_XkzmONSFac/view?usp=drive_link
+https://www.mediafire.com/file/omnc1678i9z173m/app-debug.zip/file
