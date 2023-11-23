@@ -3,6 +3,7 @@ package cl.lisgc.shoplist
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
@@ -10,31 +11,36 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-        ///Inventory
-        val inventoryNavegation = findViewById<Button>(R.id.button_inventory)
-
-        inventoryNavegation.setOnClickListener {
-            val intentAbout = Intent(this,Inventory::class.java)
-            startActivity(intentAbout)
-        }
+        setSupportActionBar(findViewById(R.id.toolbar))
 
         ///Buy
         val buyNavegation = findViewById<Button>(R.id.button_buy)
 
         buyNavegation.setOnClickListener {
-            val intentAbout = Intent(this,Buy::class.java)
+            val intentAbout = Intent(this, Buy::class.java)
             startActivity(intentAbout)
         }
 
-        ///Stores
-        val storesNavegation = findViewById<Button>(R.id.button_stores)
-
-        storesNavegation.setOnClickListener {
-            val intentAbout = Intent(this,Stores::class.java)
-            startActivity(intentAbout)
-        }
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_stores -> {
+                val intentStores = Intent(this, Stores::class.java)
+                startActivity(intentStores)
+                return true
 
+            }
+
+            R.id.action_inventory -> {
+                val intentInventory = Intent(this, Inventory::class.java)
+                startActivity(intentInventory)
+                return true
+            }
+
+            else -> return super.onOptionsItemSelected(item)
+        }
+
+
+    }
 }
