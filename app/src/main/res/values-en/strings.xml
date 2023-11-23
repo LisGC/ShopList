@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ShopList</string>
+    <string name="main_menuText">Welcome to: Your Shop List</string>
+    <string name="buy">Buy</string>
+    <string name="stores">Stores</string>
+    <string name="inventory">Inventory</string>
+    <string name="buyTitle">Purchases</string>
+    <string name="storeTitle">Available Stores</string>
+    <string name="inventoryTitle">Inventory</string>
+    <string name="back">Return</string>
+    <string name="quantity">Quantity:</string>
+    <string name="price">Price:$</string>
+    <string name="add_product">Add Product</string>
+    <string name="add_name">Name</string>
+    <string name="add_detail">Detail</string>
+    <string name="add_quantity">Quantity</string>
+    <string name="add_price">Price</string>
+    <string name="add_location">Location</string>
+    <string name="add_buy">Add to Buy</string>
+    <string name="add_inventory">Add to Inventory</string>
+</resources>

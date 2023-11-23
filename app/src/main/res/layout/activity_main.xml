@@ -9,11 +9,13 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="413dp"
+        android:layout_width="match_parent"
         android:layout_height="58dp"
         android:layout_marginBottom="28dp"
         android:background="@color/otherGreen"
         app:layout_constraintBottom_toTopOf="@+id/title_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
