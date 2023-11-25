@@ -11,63 +11,25 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="58dp"
-        android:layout_marginBottom="28dp"
         android:background="@color/otherGreen"
-        app:layout_constraintBottom_toTopOf="@+id/title_menu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="241dp"
-        android:layout_height="249dp"
+        android:layout_width="332dp"
+        android:layout_height="417dp"
         android:layout_marginStart="85dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="99dp"
         android:layout_marginEnd="85dp"
-        android:layout_marginBottom="68dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_buy"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_menu"
-        app:srcCompat="@drawable/cart_image" />
-
-    <TextView
-        android:id="@+id/title_menu"
-        android:layout_width="272dp"
-        android:layout_height="142dp"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="70dp"
-        android:fontFamily="@font/amaranth_italic"
-        android:text="@string/main_menuText"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/darkBrown"
-        android:textSize="36sp"
-        android:textStyle="italic"
-        android:typeface="serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
-    <Button
-        android:id="@+id/button_buy"
-        android:layout_width="160dp"
-        android:layout_height="85dp"
-        android:layout_marginStart="154dp"
-        android:layout_marginEnd="155dp"
-        android:layout_marginBottom="96dp"
-        android:backgroundTint="@color/darkGreen"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/buy"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textStyle="italic"
-        android:typeface="serif"
+        android:layout_marginBottom="157dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.344"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/cart_image2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

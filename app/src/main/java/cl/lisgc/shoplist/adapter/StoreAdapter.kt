@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 import cl.lisgc.shoplist.R
-import cl.lisgc.shoplist.entity.StoreT
 
 class StoreAdapterList(
     context: Context,
