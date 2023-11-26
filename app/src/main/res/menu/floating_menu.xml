@@ -4,4 +4,8 @@
     android:id="@+id/action_add"
     android:title="@string/add"/>
 
+<item
+    android:id="@+id/action_order"
+    android:title="@string/order"/>
+
 </menu>

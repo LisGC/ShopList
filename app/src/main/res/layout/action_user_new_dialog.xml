@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/lightAqua"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+<TextView
+    android:id="@+id/textViewName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/add_product"
+    android:textColor="@color/darkBrown"
+    android:textSize="18sp"
+    android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/textInputName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="@string/add_name"
+        android:textAlignment="textStart"
+        android:textColor="@color/darkBrown" />
+
+    <EditText
+        android:id="@+id/textInputCategory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="@string/orderCategory"
+        android:textColor="@color/darkBrown" />
+
+    <EditText
+        android:id="@+id/textInputQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="@string/add_quantity"
+        android:inputType="number"
+        android:textColor="@color/darkBrown" />
+
+    <EditText
+        android:id="@+id/textInputPrice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="@string/add_price"
+        android:inputType="number"
+        android:textColor="@color/darkBrown" />
+
+<Button
+    android:id="@+id/buttonAddAndGoBack"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/dullPurple"
+    android:text="@string/add" />
+
+</LinearLayout>

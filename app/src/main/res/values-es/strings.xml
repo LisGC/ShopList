@@ -20,4 +20,10 @@
     <string name="add_location">Ubicacion</string>
     <string name="add_buy">Agregar a Compra</string>
     <string name="add_inventory">Agregar a Inventario</string>
+    <string name="search">Buscar</string>
+    <string name="order">Ordenar</string>
+    <string name="orderBy">Ordenado por:</string>
+    <string name="orderName">Nombre A-Z</string>
+    <string name="orderCategory">Categoria</string>
+    <string name="orderQuantity">Cantidad</string>
 </resources>

@@ -20,4 +20,10 @@
     <string name="add_location">Location</string>
     <string name="add_buy">Add to Buy</string>
     <string name="add_inventory">Add to Inventory</string>
+    <string name="search">Search</string>
+    <string name="order">Order</string>
+    <string name="orderBy">Order by:</string>
+    <string name="orderName">Name A-Z</string>
+    <string name="orderCategory">Category</string>
+    <string name="orderQuantity">Quantity</string>
 </resources>
