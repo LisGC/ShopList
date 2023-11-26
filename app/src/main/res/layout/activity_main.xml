@@ -12,24 +12,63 @@
         android:layout_width="match_parent"
         android:layout_height="58dp"
         android:background="@color/otherGreen"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="332dp"
-        android:layout_height="417dp"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="99dp"
-        android:layout_marginEnd="85dp"
-        android:layout_marginBottom="157dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/cart_image2" />
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="337dp"
+        android:layout_height="46dp"
+        android:background="@color/white"
+        android:hint="@string/search"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="58dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout"
+        android:layout_marginTop="170dp">
+        <ListView
+            android:id="@+id/buyList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:divider="@color/otherGreen"
+            android:dividerHeight="2dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_search"
+        android:layout_width="63dp"
+        android:layout_height="48dp"
+        app:icon="@android:drawable/ic_menu_search"
+        app:iconGravity="textEnd"
+        app:iconPadding="0dp"
+        app:iconSize="35dp"
+        app:iconTint="@color/white"
+        tools:layout_editor_absoluteX="348dp"
+        tools:layout_editor_absoluteY="58dp" />
+
+    <TextView
+        android:id="@+id/show_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/orderName"
+        tools:layout_editor_absoluteX="336dp"
+        tools:layout_editor_absoluteY="104dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/orderBy"
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="104dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

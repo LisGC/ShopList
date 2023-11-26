@@ -19,9 +19,6 @@
             android:name=".AddBuyItem"
             android:exported="false" />
         <activity
-            android:name=".AddInventoryItem"
-            android:exported="false" />
-        <activity
             android:name=".SplashScreen"
             android:exported="true"
             android:noHistory="true">
@@ -31,15 +28,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Stores"
-            android:exported="false" />
-        <activity
-            android:name=".Buy"
-            android:exported="false" />
-        <activity
-            android:name=".Inventory"
-            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />

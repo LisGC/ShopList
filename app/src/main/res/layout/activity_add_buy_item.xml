@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/limeGreen"
+    android:background="@color/dullGreen"
     tools:context=".AddBuyItem">
 
     <EditText
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:background="@color/otherGreen"
+        android:background="@color/dullPurple"
         android:fontFamily="@font/amaranth_italic"
         android:text="@string/add_product"
         android:textAlignment="center"
@@ -20,12 +20,12 @@
         android:textStyle="bold|italic"
         android:typeface="serif"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/editName"/>
+        app:layout_constraintBottom_toTopOf="@+id/editName" />
 
     <EditText
         android:id="@+id/editName"
         android:layout_width="383dp"
-        android:layout_height="46dp"
+        android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:drawableTint="@color/black"
         android:ems="10"
@@ -41,13 +41,13 @@
     <EditText
         android:id="@+id/editDetail"
         android:layout_width="383dp"
-        android:layout_height="46dp"
+        android:layout_height="50dp"
         android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="@string/add_detail"
         android:inputType="text"
-        android:textColorHint="@color/black"
         android:textColor="@color/black"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editName" />
@@ -55,14 +55,14 @@
     <EditText
         android:id="@+id/editQuantity"
         android:layout_width="383dp"
-        android:layout_height="46dp"
+        android:layout_height="50dp"
         android:layout_marginTop="12dp"
         android:drawableTint="@color/black"
         android:ems="10"
         android:hint="@string/add_quantity"
         android:inputType="text"
-        android:textColorHint="@color/black"
         android:textColor="@color/black"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editDetail" />
@@ -70,14 +70,14 @@
     <EditText
         android:id="@+id/editPrice"
         android:layout_width="383dp"
-        android:layout_height="46dp"
+        android:layout_height="50dp"
         android:layout_marginTop="12dp"
         android:drawableTint="@color/black"
         android:ems="10"
         android:hint="@string/add_price"
         android:inputType="text"
-        android:textColorHint="@color/black"
         android:textColor="@color/black"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editQuantity" />
@@ -88,7 +88,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
-        android:backgroundTint="@color/otherGreen"
+        android:backgroundTint="@color/dullPurple"
         android:text="@string/add_product"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"

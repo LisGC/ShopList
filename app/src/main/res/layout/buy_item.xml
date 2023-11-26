@@ -6,7 +6,9 @@
     android:layout_height="100dp"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
-    android:background="@color/lightMagenta">
+    android:alwaysDrawnWithCache="false"
+    android:background="@color/otherGreen"
+    android:backgroundTintMode="multiply">
 
     <TextView
         android:id="@+id/item_name"
