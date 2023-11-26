@@ -14,11 +14,16 @@ Requerimientos no funcionales
 - La aplicacion debe ser interactiva y contener un diseño agradable o al menos entendible
 - La aplicacion no debe ser lenta o tener un tiempo de espera muy alto que moleste al usuario
 
-Link Video
+**Link Video**
 https://youtu.be/kh5QKD6d6RI
 
-Link Presentacion
+**Link Presentacion**
 https://docs.google.com/presentation/d/1yd8Ru5xrRcxam-l8-kkJzS8s7OdFr7v96bLPVEunFpE/edit?usp=sharing
 
-Link APK 
+**Link APK** 
 https://www.mediafire.com/file/omnc1678i9z173m/app-debug.zip/file
+
+# Version 2
+Se actualizo para poder dar solucion al requisito de usar una base de datos y que el enfoque estuviera mas en el apartado de lista de compra.
+
+**Link APK** 
