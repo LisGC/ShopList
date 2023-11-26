@@ -7,28 +7,31 @@ import android.view.Window
 import android.widget.Button
 import android.widget.TextView
 import cl.lisgc.shoplist.R
-import cl.lisgc.shoplist.entity.Product
+import cl.lisgc.shoplist.database.entity.product
 
 class BuyDetail(
         context: Context,
-        private val product: Product
-) : Dialog(context) {
+        private val item: product
+): Dialog(context) {
 
         override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        requestWindowFeature(Window.FEATURE_NO_TITLE)
-        setContentView(R.layout.activity_product_details)
+                super.onCreate(savedInstanceState)
+                requestWindowFeature(Window.FEATURE_NO_TITLE)
+                setContentView(R.layout.activity_product_details)
 
-        val textName = findViewById<TextView>(R.id.textViewName)
-        val textDetail = findViewById<TextView>(R.id.textViewDetail)
-        val textQuantity = findViewById<TextView>(R.id.textViewQuantity)
-        val textPrice = findViewById<TextView>(R.id.textViewPrice)
+                val textViewName = findViewById<TextView>(R.id.textViewName)
+                val textViewCategory = findViewById<TextView>(R.id.textViewCategory)
+                val textViewQuantity = findViewById<TextView>(R.id.textViewQuantity)
+                val textViewPrice = findViewById<TextView>(R.id.textViewPrice)
+                val buttonGoBack = findViewById<Button>(R.id.buttonGoBack)
 
-        // Set patient information in TextViews
-        textName.text = product.name
-        textDetail.text = product.detail
-        textQuantity.text = product.quantity.toString()
-        textPrice.text = product.price.toString()
+                textViewName.text = item.name
+                textViewCategory.text = item.category
+                textViewQuantity.text = item.quantity.toString()
+                textViewPrice.text = item.price.toString()
 
-    }
+                buttonGoBack.setOnClickListener {
+                        dismiss()
+                }
+        }
 }

@@ -18,7 +18,6 @@ import cl.lisgc.shoplist.adapter.BuyDetail
 import cl.lisgc.shoplist.adapter.UserNewDialog
 import cl.lisgc.shoplist.database.dataBase
 import cl.lisgc.shoplist.database.entity.product
-import cl.lisgc.shoplist.entity.Product
 
 class MainActivity : AppCompatActivity() {
 
@@ -78,7 +77,7 @@ class MainActivity : AppCompatActivity() {
 
                 changeOr.setText(R.string.orderName)
                 order = 1
-                val list: List<product> = db.getProductDao().getProductName()
+                val list: List<product> = db.getProductDao().orderProducts()
 
                 products = list.toMutableList()
 
@@ -112,7 +111,8 @@ class MainActivity : AppCompatActivity() {
                     productAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, products.map{it.name})
                     listBuy.adapter = productAdapter
 
-                }else if(changeOr.text == "Cantidad" || changeOr.text == "Quantity"){
+                }
+                else if(changeOr.text == "Cantidad" || changeOr.text == "Quantity"){
                     changeOr.setText(R.string.orderCategory)
                     order = 2
                     val list: List<product> = db.getProductDao().orderCategoryProducts()
@@ -123,7 +123,8 @@ class MainActivity : AppCompatActivity() {
                     productAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, products.map{it.name})
                     listBuy.adapter = productAdapter
 
-                }else{
+                }
+                else{
                     changeOr.setText(R.string.orderName)
                     order = 1
                     val list: List<product> = db.getProductDao().orderProducts()
@@ -137,7 +138,7 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
             R.id.action_add -> {
-                val list: List<product> = db.getProductDao().getAllProducts()
+                val list: List<product> = db.getProductDao().orderProducts()
                 val dialog = UserNewDialog(this,list.size+1,this)
                 dialog.show()
                 return true
@@ -147,5 +148,47 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    fun refreshFromDatabase() {
+        val list: List<product>
+        if (order == 1) {
+            list = db.getProductDao().orderProducts()
+            Toast.makeText(this, "Hi: " + list.size.toString(), Toast.LENGTH_LONG).show()
+
+            products = list.toMutableList()
+            Toast.makeText(this, "Hi: " + products.size.toString(), Toast.LENGTH_LONG).show()
+
+            listBuy.invalidate()
+            productAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,products.map { it.name })
+            listBuy.adapter = productAdapter
+
+        }
+        else if (order == 2) {
+            list = db.getProductDao().orderCategoryProducts()
+            Toast.makeText(this, "Hi: " + list.size.toString(), Toast.LENGTH_LONG).show()
+
+            products = list.toMutableList()
+            Toast.makeText(this, "Hi: " + products.size.toString(), Toast.LENGTH_LONG).show()
+
+            listBuy.invalidate()
+            productAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,products.map { it.name })
+            listBuy.adapter = productAdapter
+
+        }
+        else if (order == 3) {
+            list = db.getProductDao().orderQuantityProducts()
+            Toast.makeText(this, "Hi: " + list.size.toString(), Toast.LENGTH_LONG).show()
+
+            products = list.toMutableList()
+            Toast.makeText(this, "Hi: " + products.size.toString(), Toast.LENGTH_LONG).show()
+
+            listBuy.invalidate()
+            productAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,products.map { it.name })
+            listBuy.adapter = productAdapter
+        }
+
+    }
+
+
 
 }

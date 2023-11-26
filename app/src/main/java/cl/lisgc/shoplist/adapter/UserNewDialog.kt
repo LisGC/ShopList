@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.room.Room
 import cl.lisgc.shoplist.MainActivity
+import cl.lisgc.shoplist.R
 import cl.lisgc.shoplist.database.dataBase
 import cl.lisgc.shoplist.database.entity.product
 
@@ -15,7 +16,7 @@ class UserNewDialog (
     context: Context,
     idItem: Int,
     act: MainActivity
-): Dialog(context){
+): Dialog(context) {
 
     private lateinit var name: EditText
     private lateinit var category: EditText
@@ -28,12 +29,12 @@ class UserNewDialog (
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
-        setContentView(R.layout.dialog_user_new)
+        setContentView(R.layout.action_user_new_dialog)
 
-        name = findViewById(R.id.textInputNombre)
-        category = findViewById(R.id.textInputTipo)
-        quantity = findViewById(R.id.textInputCantidad)
-        price = findViewById(R.id.textInputPrecio)
+        name = findViewById(R.id.textInputName)
+        category = findViewById(R.id.textInputCategory)
+        quantity = findViewById(R.id.textInputQuantity)
+        price = findViewById(R.id.textInputPrice)
 
         db = Room.databaseBuilder(
             context,
@@ -41,13 +42,20 @@ class UserNewDialog (
         ).allowMainThreadQueries().build()
 
         val buttonAddAndGoBack: Button = findViewById(R.id.buttonAddAndGoBack)
-        buttonAddAndGoBack.setOnClickListener{
+        buttonAddAndGoBack.setOnClickListener {
 
             db.getProductDao().insertAll(
-                product(id, name.text.toString(), category.text.toString(), quantity.text.toString().toInt(), price.text.toString().toInt())
+                product(
+                    id,
+                    name.text.toString(),
+                    category.text.toString(),
+                    quantity.text.toString().toInt(),
+                    price.text.toString().toInt()
+                )
             )
             act.refreshFromDatabase()
             dismiss()
         }
 
     }
+}
