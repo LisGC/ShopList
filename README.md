@@ -27,3 +27,4 @@ https://www.mediafire.com/file/omnc1678i9z173m/app-debug.zip/file
 Se actualizo para poder dar solucion al requisito de usar una base de datos y que el enfoque estuviera mas en el apartado de lista de compra.
 
 **Link APK** 
+https://www.mediafire.com/file/00dauirxkztkllv/app-ShopList.apk/file  
