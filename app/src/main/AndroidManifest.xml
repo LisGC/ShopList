@@ -13,10 +13,7 @@
         android:theme="@style/Theme.ShopList"
         tools:targetApi="31">
         <activity
-            android:name=".ProductDetails"
-            android:exported="false" />
-        <activity
-            android:name=".AddBuyItem"
+            android:name=".EditProduct"
             android:exported="false" />
         <activity
             android:name=".SplashScreen"

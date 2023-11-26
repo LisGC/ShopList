@@ -3,15 +3,18 @@ package cl.lisgc.shoplist
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ListView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.room.Room
 import cl.lisgc.shoplist.adapter.BuyAdapterList
 import cl.lisgc.shoplist.adapter.BuyDetail
@@ -96,6 +99,11 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
+    override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
+        super.onCreateContextMenu(menu, v, menuInfo)
+        menuInflater.inflate(R.menu.list_menu, menu)
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when(item.itemId){
@@ -148,7 +156,63 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_show -> {
+                val info = item.menuInfo as AdapterView.AdapterContextMenuInfo
+                val position = info.position
+                showItemDetailDialog(products.get(position))
+                true
+            }
 
+            R.id.action_edit -> {
+                val intent = Intent(this, EditProduct::class.java)
+                val info = item.menuInfo as AdapterView.AdapterContextMenuInfo
+                val position = info.position
+                true
+            }
+            R.id.action_delete -> {
+                // Handle the "Delete" option
+                // Show the confirmation dialog when "Delete" is selected
+                val info = item.menuInfo as AdapterView.AdapterContextMenuInfo
+                val position = info.position
+                showDeleteConfirmationDialog(position)
+                true
+            }
+            // Add cases for other options as needed
+            else -> {
+                super.onContextItemSelected(item)
+            }
+        }
+    }
+    private fun showDeleteConfirmationDialog(itemPosition: Int) {
+        val builder = AlertDialog.Builder(this)
+
+        builder.setMessage(R.string.delete_message)
+        builder.setPositiveButton(R.string.delete) { dialog, _ ->
+            // Handle the delete action here
+            deleteItem(itemPosition)
+        }
+        builder.setNegativeButton(R.string.cancel) { dialog, _ ->
+            dialog.dismiss()
+        }
+        builder.create().show()
+    }
+
+    private fun deleteItem(itemPosition: Int) {
+
+        deleteFromDatabase(products[itemPosition])
+        refreshFromDatabase()
+    }
+
+    fun deleteFromDatabase(user : product) {
+        db.getProductDao().delete(user)
+    }
+
+    private fun showItemDetailDialog(item: product) {
+        val dialog = BuyDetail(this, item)
+        dialog.show()
+    }
     fun refreshFromDatabase() {
         val list: List<product>
         if (order == 1) {

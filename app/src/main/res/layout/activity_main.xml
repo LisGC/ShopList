@@ -22,10 +22,12 @@
         android:id="@+id/searchBar"
         android:layout_width="337dp"
         android:layout_height="46dp"
+        android:layout_marginEnd="11dp"
         android:background="@color/white"
         android:hint="@string/search"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="58dp" />
+        app:layout_constraintEnd_toStartOf="@+id/button_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,13 +35,17 @@
         android:orientation="vertical"
         android:id="@+id/linearLayout"
         android:layout_marginTop="170dp">
+
         <ListView
             android:id="@+id/buyList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@color/darkGreen"
             android:divider="@color/otherGreen"
-            android:dividerHeight="2dp"/>
+            android:dividerHeight="2dp"
+            android:textColor="@color/black"
+            android:textFilterEnabled="true" />
     </LinearLayout>
 
     <Button
@@ -51,24 +57,33 @@
         app:iconPadding="0dp"
         app:iconSize="35dp"
         app:iconTint="@color/white"
-        tools:layout_editor_absoluteX="348dp"
-        tools:layout_editor_absoluteY="58dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <TextView
         android:id="@+id/show_order"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="96dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="195dp"
         android:text="@string/orderName"
-        tools:layout_editor_absoluteX="336dp"
-        tools:layout_editor_absoluteY="104dp" />
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBar" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="10dp"
         android:text="@string/orderBy"
-        tools:layout_editor_absoluteX="234dp"
-        tools:layout_editor_absoluteY="104dp" />
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/show_order"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBar" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 import cl.lisgc.shoplist.R
-import cl.lisgc.shoplist.entity.Product
+import cl.lisgc.shoplist.database.entity.product
 
 class BuyAdapterList(
     context: Context,
     resources: Int,
-    product: List<Product>
-) : ArrayAdapter<Product>(context, resources, product){
+    product: List<product>
+) : ArrayAdapter<product>(context, resources, product){
 
     override fun getView(posicion: Int, convertView: View?, parent: ViewGroup): View {
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -30,7 +30,6 @@ class BuyAdapterList(
 
         // Set the patient data in the TextViews
         nameTextView.text = product?.name
-        resourcesTextView.text = product?.detail
         quantityTextView.text = product?.quantity.toString()
         priceTextView.text = product?.price.toString()
 

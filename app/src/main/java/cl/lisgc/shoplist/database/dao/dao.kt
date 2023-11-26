@@ -1,10 +1,11 @@
 package cl.lisgc.shoplist.database.dao
 
+import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import cl.lisgc.shoplist.database.entity.product
-
+@Dao
 interface dao {
     @Query("SELECT * FROM table_products")
     fun getAllProducts():List<product>
